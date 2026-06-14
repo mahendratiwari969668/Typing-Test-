@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Master Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hidden Input -->
+    <input type="text" id="typingInput" autocomplete="off" spellcheck="false">
+
+    <div class="container">
+
+        <!-- Top Navbar -->
+        <header class="navbar">
+
+            <div class="logo-section">
+                <button class="menu-btn">☰</button>
+                <h1>Typing Master Pro</h1>
+            </div>
+
+            <div class="top-actions">
+
+                <button id="retryTopBtn" title="Retry">
+                    ↻
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Settings Panel -->
+        <section class="settings-panel">
+
+            <div class="setting-group">
+
+                <label>Paragraph Count</label>
+
+                <select id="paragraphCount">
+                    <option value="1">1 Paragraph</option>
+                    <option value="2">2 Paragraphs</option>
+                    <option value="3">3 Paragraphs</option>
+                    <option value="4">4 Paragraphs</option>
+                    <option value="5" selected>5 Paragraphs</option>
+                    <option value="6">6 Paragraphs</option>
+                    <option value="7">7 Paragraphs</option>
+                    <option value="8">8 Paragraphs</option>
+                    <option value="9">9 Paragraphs</option>
+                    <option value="10">10 Paragraphs</option>
+                </select>
+
+            </div>
+
+            <div class="setting-group">
+
+                <label>
+                    <input type="checkbox" id="smallLetters" checked>
+                    Small Letters
+                </label>
+
+                <label>
+                    <input type="checkbox" id="capitalLetters" checked>
+                    Capital Letters
+                </label>
+
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    Numbers
+                </label>
+
+                <label>
+                    <input type="checkbox" id="symbols" checked>
+                    Symbols
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- Live Stats -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Current WPM</h3>
+                <span id="currentWpm">0</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Current Accuracy</h3>
+                <span id="currentAccuracy">100%</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Correct Characters</h3>
+                <span id="correctCharacters">0</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Incorrect Characters</h3>
+                <span id="incorrectCharacters">0</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Typed</h3>
+                <span id="totalTypedCharacters">0</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Elapsed Time</h3>
+                <span id="elapsedTime">00:00</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Paragraph</h3>
+                <span id="paragraphProgress">1/1</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Status</h3>
+                <span id="typingStatus">Ready</span>
+            </div>
+
+        </section>
+
+        <!-- Typing Area -->
+        <section class="typing-section">
+
+            <div class="typing-box">
+
+                <div class="typing-header">
+
+                    <button id="startBtn">
+                        Start Typing
+                    </button>
+
+                </div>
+
+                <div id="paragraphDisplay" class="paragraph-display">
+                    Click Start Typing
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Pause Message -->
+        <section id="pauseOverlay" class="pause-overlay">
+
+            <div class="pause-box">
+
+                <h2>Paused</h2>
+
+                <p>
+                    No typing detected for 5 seconds.
+                </p>
+
+                <p>
+                    Press any key to continue.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Virtual Keyboard -->
+        <section class="keyboard-section">
+
+            <div class="keyboard">
+
+                <!-- Row 1 -->
+                <div class="key-row">
+                    <div class="key">~</div>
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                    <div class="key">0</div>
+                    <div class="key">-</div>
+                    <div class="key">=</div>
+                    <div class="key large-key">Backspace</div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="key-row">
+                    <div class="key large-key">Tab</div>
+                    <div class="key">Q</div>
+                    <div class="key">W</div>
+                    <div class="key">E</div>
+                    <div class="key">R</div>
+                    <div class="key">T</div>
+                    <div class="key">Y</div>
+                    <div class="key">U</div>
+                    <div class="key">I</div>
+                    <div class="key">O</div>
+                    <div class="key">P</div>
+                    <div class="key">{</div>
+                    <div class="key">}</div>
+                    <div class="key">\</div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="key-row">
+                    <div class="key xl-key">Caps</div>
+                    <div class="key">A</div>
+                    <div class="key">S</div>
+                    <div class="key">D</div>
+                    <div class="key">F</div>
+                    <div class="key">G</div>
+                    <div class="key">H</div>
+                    <div class="key">J</div>
+                    <div class="key">K</div>
+                    <div class="key">L</div>
+                    <div class="key">;</div>
+                    <div class="key">'</div>
+                    <div class="key xl-key">Enter</div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="key-row">
+                    <div class="key xl-key">Shift</div>
+                    <div class="key">Z</div>
+                    <div class="key">X</div>
+                    <div class="key">C</div>
+                    <div class="key">V</div>
+                    <div class="key">B</div>
+                    <div class="key">N</div>
+                    <div class="key">M</div>
+                    <div class="key">,</div>
+                    <div class="key">.</div>
+                    <div class="key">/</div>
+                    <div class="key xl-key">Shift</div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="key-row">
+                    <div class="key">Ctrl</div>
+                    <div class="key">Alt</div>
+                    <div class="key space-key">Space</div>
+                    <div class="key">Alt</div>
+                    <div class="key">Ctrl</div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="result-modal">
+
+        <div class="result-box">
+
+            <h2>Typing Test Completed</h2>
+
+            <div class="result-grid">
+
+                <div class="result-card">
+                    <h3>Average WPM</h3>
+                    <span id="avgWpm">0</span>
+                </div>
+
+                <div class="result-card">
+                    <h3>Average Accuracy</h3>
+                    <span id="avgAccuracy">0%</span>
+                </div>
+
+                <div class="result-card">
+                    <h3>Best WPM</h3>
+                    <span id="bestWpm">0</span>
+                </div>
+
+                <div class="result-card">
+                    <h3>Best Accuracy</h3>
+                    <span id="bestAccuracy">0%</span>
+                </div>
+
+            </div>
+
+            <div class="result-buttons">
+
+                <button id="retryBtn">
+                    Retry
+                </button>
+
+                <button id="nextBtn">
+                    Next Paragraph
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
