@@ -33,6 +33,68 @@ const paragraphDatabase = [
 
 "Music has the power to inspire emotions create memories and connect people across different backgrounds. Different genres and styles reflect diverse cultures traditions and artistic expressions. Whether listening performing or composing music individuals can experience creativity relaxation and a unique form of communication that transcends language barriers.",
 
+    
+
+
+"The library remained quiet throughout the afternoon as students focused on their studies and prepared for upcoming examinations with determination and concentration.",
+
+"A healthy morning routine often includes exercise proper hydration and a nutritious breakfast that provides energy for the rest of the day.",
+
+"The engineer carefully tested the new software application to ensure that every feature worked correctly under different conditions and scenarios.",
+
+"Many successful entrepreneurs started with simple ideas and gradually transformed them into businesses through dedication planning and persistence.",
+
+"The beautiful garden was filled with colorful flowers green plants and butterflies that moved gracefully from one blossom to another.",
+
+"Artificial intelligence continues to transform industries by automating repetitive tasks and helping professionals make better decisions based on data.",
+
+"The young athlete practiced every evening after school and eventually earned a place on the regional championship team.",
+
+"Proper communication helps prevent misunderstandings and allows people to work together more effectively toward shared goals and objectives.",
+
+"The museum displayed historical artifacts that provided visitors with valuable insights into ancient civilizations and cultural traditions.",
+
+"Cloud computing enables organizations to store access and manage information efficiently without relying entirely on physical hardware systems.",
+
+"The chef prepared a delicious meal using fresh ingredients carefully selected from the local market earlier that morning.",
+
+"Learning a new language requires patience regular practice and the willingness to make mistakes while improving communication skills.",
+
+"The research team spent several months collecting information before presenting their findings at an international scientific conference.",
+
+"Environmental conservation plays an important role in protecting natural resources and preserving ecosystems for future generations.",
+
+"The students collaborated on a group project and successfully completed the assignment before the submission deadline arrived.",
+
+"Cybersecurity professionals work to protect networks systems and sensitive information from unauthorized access and potential threats.",
+
+"The mountain trail offered breathtaking views of forests rivers and distant valleys that attracted hikers from many regions.",
+
+"Time spent developing productive habits can significantly improve academic performance professional growth and personal development.",
+
+"The company introduced a new product line designed to meet customer expectations while maintaining high quality standards.",
+
+"Advancements in medical technology have improved diagnosis treatment and recovery outcomes for patients around the world.",
+
+"The train station became crowded during the holiday season as travelers prepared to visit friends and family members.",
+
+"Good leadership involves listening carefully making informed decisions and supporting team members during challenging situations.",
+
+"The documentary explored important historical events and presented detailed information through interviews photographs and archival footage.",
+
+"Computer networks allow devices to exchange information efficiently and support communication across different locations worldwide.",
+
+"The artist spent countless hours refining each detail of the painting to achieve the desired visual effect and balance.",
+
+"Regular reading helps individuals expand their knowledge improve vocabulary and strengthen comprehension skills over time.",
+
+"The weather forecast predicted heavy rainfall throughout the weekend prompting residents to make necessary preparations in advance.",
+
+"Many developers enjoy building personal projects because they provide opportunities to experiment with new technologies and ideas.",
+
+"The space mission successfully collected valuable scientific data that contributed to a deeper understanding of the solar system.",
+
+"Effective problem solving requires analyzing information identifying possible solutions and selecting the most practical course of action."
 ];
 
 const numberParagraphs = [
