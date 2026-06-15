@@ -31,7 +31,7 @@ const paragraphDatabase = [
 
 "Success is often achieved through discipline dedication persistence and the willingness to learn from mistakes. Challenges and setbacks are natural parts of any journey toward meaningful goals. People who remain focused adaptable and committed to continuous improvement are more likely to achieve lasting success in their chosen endeavors.",
 
-"Music has the power to inspire emotions create memories and connect people across different backgrounds. Different genres and styles reflect diverse cultures traditions and artistic expressions. Whether listening performing or composing music individuals can experience creativity relaxation and a unique form of communication that transcends language barriers."
+"Music has the power to inspire emotions create memories and connect people across different backgrounds. Different genres and styles reflect diverse cultures traditions and artistic expressions. Whether listening performing or composing music individuals can experience creativity relaxation and a unique form of communication that transcends language barriers.",
 
 ];
 
