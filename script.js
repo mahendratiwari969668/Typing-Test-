@@ -124,21 +124,38 @@ const symbolParagraphs = [
 ];
 
 const mixedParagraphs = [
-    "Speed Drill A1: type 123 + 456 = 579, then press #!",
-    "Level B2 costs $75.50; apply code SAVE20 for 20% off.",
-    "User C3 logged in at 09:45 with key @Alpha#2026.",
-    "Task D4: move 88 files from /home to C:\\backup safely.",
-    "Score E5 was 950/1000, which equals 95% accuracy!",
-    "Order F6-2048 ships on 15/08/2026 at 10:30 a.m.",
-    "Route G7 uses A1 > B2 > C3; distance = 42.5 km.",
-    "Alert H8: CPU reached 87%, RAM used 6.4/8 GB.",
-    "Invoice J9 totals $1,250.00 + 18% tax = $1,475.00.",
-    "Build K10 passed 24/25 tests; retry test_case#17."
+  "Order #1256 | Date: 15/08/2026 | Amount: ₹2,450.75 | Tax: 18% | Total: ₹2,891.89 | Status: PAID",
+
+"User-ID: U2026-4589 | Login: 09:45 AM | Password Hint: @Alpha#789 | Attempts: 2/5 | Access: Granted",
+
+"Product A-101 = ₹599 | Product B-205 = ₹1,299 | Discount: 25% | Coupon: SAVE25 | Final: ₹1,423.50",
+
+"Server Load: CPU=87% | RAM=6.4/8GB | Disk=420/500GB | Temp=72°C | Uptime=125 Days",
+
+"Flight AI-2026 | Gate #12 | Seat 18A | Boarding: 08:30 | Departure: 09:15 | Arrival: 11:45",
+
+"Match Score: Team-A=245/6 | Team-B=238/9 | Difference=7 Runs | Overs=50.0 | Result: WIN",
+
+"Transaction #458921 | Amount=$1,250.50 | Fee=$12.25 | Tax=18% | Net=$1,013.60 | Success=YES",
+
+"Route: A1→B2→C3→D4 | Distance=42.8km | Fuel=3.5L | Speed=65km/h | ETA=00:39:25",
+
+"Stock: XYZ@₹1,245.80 | Change:+4.8% | Volume:1,25,000 | High:₹1,260 | Low:₹1,210",
+
+"Exam Result: Roll#220145 | Marks=478/500 | Percentage=95.6% | Rank=#12 | Status=PASS",
+
+"Invoice #2026-450 | Qty=15 | Price=₹249.99 | Discount=10% | GST=18% | Total=₹3,984.57",
+
+"Network: Ping=18ms | Download=125.4Mbps | Upload=42.8Mbps | Loss=0.2% | Signal=98%",
+
+"Bank A/C: XXXX-4589 | Balance=₹45,780.90 | Debit=₹1,250 | Credit=₹5,000 | Updated=14:25",
+
+"Weather: Temp=38°C | Humidity=72% | Wind=18km/h | Rain=25% | UV Index=8.5",
+
+"Build v2.5.18 | Tests=148/150 | Failed=2 | Coverage=97.8% | Deploy=SUCCESS"
 ];
 
-// ================================
-// GLOBAL VARIABLES
-// ================================
+
 
 const typingInput = document.getElementById("typingInput");
 const paragraphDisplay = document.getElementById("paragraphDisplay");
@@ -182,9 +199,6 @@ document.getElementById("numbers");
 const symbols =
 document.getElementById("symbols");
 
-// ================================
-// TEST STATE
-// ================================
 
 let selectedParagraphs = [];
 let currentParagraphIndex = 0;
@@ -217,9 +231,7 @@ let totalAccuracyHistory = [];
 
 let finishedParagraphs = 0;
 
-// ================================
-// LOCAL STORAGE
-// ================================
+
 
 function loadBestStats() {
 
@@ -265,9 +277,7 @@ function saveBestStats(wpm, accuracy) {
     );
 }
 
-// ================================
-// RANDOM PARAGRAPH SELECTION
-// ================================
+
 
 function shuffleArray(array) {
 
@@ -338,9 +348,7 @@ function generateParagraphList() {
     `1/${selectedParagraphs.length}`;
 }
 
-// ================================
-// CHARACTER RENDERING
-// ================================
+
 
 function renderParagraph(text) {
 
@@ -362,9 +370,7 @@ function renderParagraph(text) {
     });
 }
 
-// ================================
-// LOAD CURRENT PARAGRAPH
-// ================================
+
 
 function loadParagraph() {
 
@@ -393,9 +399,7 @@ function loadParagraph() {
     renderParagraph(currentText);
 }
 
-// ================================
-// START TEST
-// ================================
+
 
 function validateFilters() {
 
@@ -448,9 +452,6 @@ startBtn.addEventListener(
 
 
 
-// ================================
-// WPM CALCULATION
-// ================================
 
 function calculateWPM() {
 
@@ -473,9 +474,6 @@ function calculateWPM() {
     );
 }
 
-// ================================
-// ACCURACY CALCULATION
-// ================================
 
 function calculateAccuracy() {
 
@@ -492,9 +490,6 @@ function calculateAccuracy() {
     );
 }
 
-// ================================
-// UPDATE STATS
-// ================================
 
 function updateStats() {
 
@@ -558,9 +553,6 @@ function startStatsTimer() {
     );
 }
 
-// ================================
-// INACTIVITY TIMER
-// ================================
 
 function resetPauseTimer() {
 
@@ -586,9 +578,6 @@ function resetPauseTimer() {
     }, 5000);
 }
 
-// ================================
-// RESUME
-// ================================
 
 document.addEventListener(
     "keydown",
@@ -610,9 +599,6 @@ document.addEventListener(
     }
 );
 
-// ================================
-// CHARACTER UPDATE
-// ================================
 
 function updateCharacterDisplay(
     typedChar
@@ -722,9 +708,7 @@ function removePreviousCharacter() {
     updateStats();
 }
 
-// ================================
-// TYPING EVENT
-// ================================
+
 
 typingInput.addEventListener(
     "keydown",
@@ -809,15 +793,6 @@ typingInput.addEventListener(
     }
 );
 
-// ================================
-// KEEP INPUT FOCUSED
-// ================================
-
-
-
-// ================================
-// RETRY BUTTONS
-// ================================
 
 function retryCurrentParagraph() {
 
@@ -892,10 +867,6 @@ retryBtn.addEventListener(
 
 
 
-// ================================
-// FINISH CURRENT PARAGRAPH
-// ================================
-
 function finishCurrentParagraph() {
 
     clearTimeout(pauseTimer);
@@ -943,9 +914,7 @@ function finishCurrentParagraph() {
     }, 1000);
 }
 
-// ================================
-// FINISH COMPLETE TEST
-// ================================
+
 
 function finishWholeTest() {
 
@@ -991,9 +960,6 @@ function finishWholeTest() {
     best.bestAccuracy + "%";
 }
 
-// ================================
-// NEXT PARAGRAPH BUTTON
-// ================================
 
 nextBtn.addEventListener(
     "click",
@@ -1008,9 +974,7 @@ nextBtn.addEventListener(
     }
 );
 
-// ================================
-// LOAD BEST DATA
-// ================================
+
 
 function initializeBestStats() {
 
@@ -1024,9 +988,7 @@ function initializeBestStats() {
     best.bestAccuracy + "%";
 }
 
-// ================================
-// FILTERS
-// ================================
+
 
 function applyFilters(text) {
 
@@ -1098,9 +1060,7 @@ function applyFilters(text) {
     return result.trim();
 }
 
-// ================================
-// OVERRIDE LOAD PARAGRAPH
-// ================================
+
 
 const originalLoadParagraph =
 loadParagraph;
@@ -1139,9 +1099,6 @@ loadParagraph = function () {
     );
 };
 
-// ================================
-// KEYBOARD HIGHLIGHTING
-// ================================
 
 document.addEventListener(
     "keydown",
@@ -1176,9 +1133,6 @@ document.addEventListener(
     }
 );
 
-// ================================
-// ESC CLOSE RESULT
-// ================================
 
 document.addEventListener(
     "keydown",
@@ -1195,15 +1149,9 @@ document.addEventListener(
     }
 );
 
-// ================================
-// INITIALIZE
-// ================================
 
 initializeBestStats();
 
-// ================================
-// TYPING AREA FOCUS
-// ================================
 
 document.addEventListener(
     "click",
